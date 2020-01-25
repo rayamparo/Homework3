@@ -12,26 +12,16 @@ function generatePassword() {
 
 
 
-  function randomCharacter(arr) {
-    let length = arr.length
-    return arr[Math.floor(Math.random() * length)];
+  function randomCharacter(x) {
+    let length = x.length
+    return x[Math.floor(Math.random() * length)];
   }
 
   let charLength = parseInt(prompt("Enter a number between 8  and 128 for the length of the password."));
-  //let lowerC = confirm("Would you like lowercase letters within your password?");
-  //let upperC = confirm("Would you like uppercase letters within your password?");
-  //let numbers = confirm("Would you like numbers within your password?");
-  //let special = confirm("Would you like special characters within your password?");
 
-  if (charLength < 8) {
-    alert("That's not enough characters!");
-    parseInt(prompt("Enter a number between 8  and 128 for the length of the password."));
+  if (charLength < 8 || charLength > 128) {
+    alert("Must be in between 8 and 128 characters");
   }
-  else if (charLength > 128) {
-    alert("That's too many characters!");
-    parseInt(prompt("Enter a number between 8  and 128 for the length of the password."));
-  }
-
   else {
 
   function promptFunc() {
